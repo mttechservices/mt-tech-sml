@@ -8,22 +8,20 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
 
 <div class="background-glow glow-1"></div>
 <div class="background-glow glow-2"></div>
 
+<!-- NAVBAR -->
 <nav class="navbar">
 
-    <div class="logo">
-        MT Tech Services
-    </div>
+    <div class="logo">MT Tech Services</div>
 
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -36,193 +34,152 @@
         class="book-btn"
         data-cal-link="mt-tech-service/mt-tech-services-appointment"
         data-cal-namespace="mt-tech-services-appointment"
-        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-        Book Now
+        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":true}'>
+
+        Book Appointment
     </button>
 
 </nav>
 
-<section class="hero">
+<!-- HERO -->
+<header class="hero">
 
     <div class="hero-content">
 
-        <div class="hero-badge">
-            Our Services
-        </div>
+        <div class="hero-badge">Services</div>
 
         <h1>
-            Technology
-            <span>Solutions</span>
+            Technology <span>Solutions</span>
         </h1>
 
         <p class="hero-description">
-
-            Whether you need help with a computer,
-            Wi-Fi network, printer, smart device,
-            or everyday technology issue,
-            MT Tech Services is here to help.
-
+            Complete home and small business technology support,
+            from computers to networking and smart devices.
         </p>
 
+    </div>
+
+</header>
+
+<!-- SERVICES GRID -->
+<section class="services-grid">
+
+    <div class="service-card">
+        <div class="service-icon">Computer</div>
+        <h3>Computer Support</h3>
+        <p>Setup, troubleshooting, software installation, optimization, and repairs.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">Network</div>
+        <h3>Wi-Fi & Networking</h3>
+        <p>Router setup, signal improvement, and full network troubleshooting.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">Printer</div>
+        <h3>Printer Setup</h3>
+        <p>Wireless printer installation and configuration support.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">Devices</div>
+        <h3>Device Setup</h3>
+        <p>Phones, tablets, laptops, TVs, and streaming devices.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">Smart Home</div>
+        <h3>Smart Home Support</h3>
+        <p>Smart speakers, cameras, and connected home devices.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">General</div>
+        <h3>General Tech Help</h3>
+        <p>Everyday troubleshooting and personalized tech assistance.</p>
     </div>
 
 </section>
 
-<section class="services">
-
-    <div class="card">
-        <h2>💻 Computer Support</h2>
-        <p>
-            Setup, troubleshooting, software installation,
-            updates, optimization, and general assistance.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>📶 Wi-Fi & Networking</h2>
-        <p>
-            Router setup, Wi-Fi troubleshooting,
-            signal improvement, and network assistance.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>🖨 Printer Setup</h2>
-        <p>
-            Wireless printer configuration,
-            installation, and troubleshooting.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>📱 Device Setup</h2>
-        <p>
-            Phones, tablets, laptops,
-            smart TVs, and streaming devices.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>🏠 Smart Home Help</h2>
-        <p>
-            Smart speakers, cameras,
-            streaming devices, and home technology.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>⚙ General Tech Support</h2>
-        <p>
-            Everyday technology help,
-            troubleshooting, and consultations.
-        </p>
-    </div>
-
-</section>
-
+<!-- INFO STRIP -->
 <section class="stats">
 
     <div class="stat-card">
         <h2>Local Service</h2>
-        <p>Serving Smith Mountain Lake and surrounding areas.</p>
+        <p>Smith Mountain Lake and surrounding areas</p>
     </div>
 
     <div class="stat-card">
         <h2>Flexible Scheduling</h2>
-        <p>Appointments available through our online scheduler.</p>
+        <p>Book appointments online anytime</p>
     </div>
 
     <div class="stat-card">
-        <h2>Friendly Support</h2>
-        <p>Technology help explained in plain language.</p>
+        <h2>Clear Support</h2>
+        <p>Simple explanations, no technical jargon</p>
     </div>
 
 </section>
 
-<section class="hero">
+<!-- CTA -->
+<section class="cta">
 
-    <div class="hero-content">
+    <h2>Ready to Get Started?</h2>
 
-        <div class="hero-badge">
-            Ready to Get Started?
-        </div>
+    <p>Book an appointment and get fast, reliable tech support.</p>
 
-        <h1>
-            Book Your
-            <span>Appointment</span>
-        </h1>
+    <button
+        class="primary-btn"
+        data-cal-link="mt-tech-service/mt-tech-services-appointment"
+        data-cal-namespace="mt-tech-services-appointment"
+        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":true}'>
 
-        <p class="hero-description">
-
-            Schedule a technology support appointment
-            directly through our online booking system.
-
-        </p>
-
-        <button
-            class="primary-btn"
-            data-cal-link="mt-tech-service/mt-tech-services-appointment"
-            data-cal-namespace="mt-tech-services-appointment"
-            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-
-            Schedule Appointment
-
-        </button>
-
-    </div>
+        Schedule Appointment
+    </button>
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 
-    <p>MT Tech Services</p>
-    <p>Smith Mountain Lake, Virginia</p>
+    <div class="footer-content">
+
+        <div class="footer-column">
+            <h3>MT Tech Services</h3>
+            <p>Technology support for homes and small businesses.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Navigation</h3>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Available by appointment</p>
+            <p>On-site and remote support</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 MT Tech Services
+    </div>
 
 </footer>
 
 <script src="script.js"></script>
 
-<!-- Cal.com Embed -->
+<!-- Cal Embed -->
+<script src="https://app.cal.com/embed/embed.js"></script>
 
-<script type="text/javascript">
-(function (C, A, L) {
-let p = function (a, ar) { a.q.push(ar); };
-let d = C.document;
-C.Cal = C.Cal || function () {
-let cal = C.Cal;
-let ar = arguments;
-if (!cal.loaded) {
-cal.ns = {};
-cal.q = cal.q || [];
-d.head.appendChild(d.createElement("script")).src = A;
-cal.loaded = true;
-}
-if (ar[0] === L) {
-const api = function () { p(api, arguments); };
-const namespace = ar[1];
-api.q = api.q || [];
-if(typeof namespace === "string"){
-cal.ns[namespace] = cal.ns[namespace] || api;
-p(cal.ns[namespace], ar);
-p(cal, ["initNamespace", namespace]);
-}
-else p(cal, ar);
-return;
-}
-p(cal, ar);
-};
-})(window,"https://app.cal.com/embed/embed.js","init");
-
-Cal("init","mt-tech-services-appointment",
-{origin:"https://app.cal.com"});
-
-Cal.ns["mt-tech-services-appointment"](
-"ui",
-{
-hideEventTypeDetails:false,
-layout:"month_view"
-}
-);
+<script>
+Cal("init","mt-tech-services-appointment",{origin:"https://app.cal.com"});
+Cal.ns["mt-tech-services-appointment"]("ui",{layout:"month_view"});
 </script>
 
 </body>
