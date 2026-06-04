@@ -1,216 +1,136 @@
 // ============================
 // MT TECH SERVICES
-// Premium Animations
+// Clean Interaction Script
 // ============================
 
-// Counter Animation
+document.addEventListener("DOMContentLoaded", () => {
 
-const counters = document.querySelectorAll(".counter");
+    // =========================
+    // COUNTER ANIMATION
+    // =========================
 
-counters.forEach(counter => {
+    const counters = document.querySelectorAll(".counter");
 
-    const updateCounter = () => {
+    counters.forEach(counter => {
 
-        const target = +counter.dataset.target;
-        const current = +counter.innerText;
+        const target = parseInt(counter.dataset.target);
+        let current = 0;
 
-        const increment = target / 100;
+        const step = Math.max(1, Math.floor(target / 100));
 
-        if(current < target){
+        const update = () => {
 
-            counter.innerText =
-                Math.ceil(current + increment);
+            current += step;
 
-            setTimeout(updateCounter,20);
+            if (current >= target) {
+                counter.innerText = target;
+            } else {
+                counter.innerText = current;
+                requestAnimationFrame(() => setTimeout(update, 20));
+            }
 
-        }else{
+        };
 
-            counter.innerText = target;
+        update();
+    });
 
-        }
+    // =========================
+    // SCROLL REVEAL (FIXED)
+    // =========================
+
+    const revealElements = document.querySelectorAll(
+        ".service-card, .stat-card, .hero-content, .glass-panel"
+    );
+
+    const reveal = () => {
+
+        const trigger = window.innerHeight * 0.85;
+
+        revealElements.forEach(el => {
+
+            const top = el.getBoundingClientRect().top;
+
+            if (top < trigger) {
+                el.classList.add("show");
+            }
+
+        });
 
     };
 
-    updateCounter();
+    window.addEventListener("scroll", reveal);
+    reveal();
 
-});
+    // =========================
+    // NAVBAR SCROLL EFFECT (CLEAN)
+    // =========================
 
-// Scroll Reveal
+    const navbar = document.querySelector(".navbar");
 
-const revealElements = document.querySelectorAll(
-    ".card, .stat-card, .hero-content, .hero-visual"
-);
+    window.addEventListener("scroll", () => {
 
-const revealOnScroll = () => {
+        if (!navbar) return;
 
-    revealElements.forEach(element => {
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
 
-        const windowHeight =
-            window.innerHeight;
+    });
 
-        const elementTop =
-            element.getBoundingClientRect().top;
+    // =========================
+    // HERO FADE (SOFTENED)
+    // =========================
 
-        if(elementTop < windowHeight - 100){
+    const hero = document.querySelector(".hero");
 
-            element.classList.add("show");
+    window.addEventListener("scroll", () => {
 
+        if (!hero) return;
+
+        const opacity = Math.max(0, 1 - window.scrollY / 900);
+
+        hero.style.opacity = opacity;
+
+    });
+
+    // =========================
+    // GLOW MOUSE EFFECT (SMOOTHER)
+    // =========================
+
+    const glow1 = document.querySelector(".glow-1");
+    const glow2 = document.querySelector(".glow-2");
+
+    document.addEventListener("mousemove", (e) => {
+
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+
+        if (glow1) {
+            glow1.style.transform = `translate(${x * 25}px, ${y * 25}px)`;
+        }
+
+        if (glow2) {
+            glow2.style.transform = `translate(${-x * 25}px, ${-y * 25}px)`;
         }
 
     });
 
-};
+    // =========================
+    // BUTTON HOVER STATE (KEPT CLEAN)
+    // =========================
 
-window.addEventListener(
-    "scroll",
-    revealOnScroll
-);
+    const buttons = document.querySelectorAll(".book-btn, .primary-btn");
 
-revealOnScroll();
+    buttons.forEach(btn => {
 
-// Navbar Effect
+        btn.addEventListener("mousemove", (e) => {
 
-const navbar =
-    document.querySelector(".navbar");
+            const rect = btn.getBoundingClientRect();
 
-window.addEventListener("scroll", () => {
+            btn.style.setProperty("--x", `${e.clientX - rect.left}px`);
+            btn.style.setProperty("--y", `${e.clientY - rect.top}px`);
 
-    if(window.scrollY > 50){
+        });
 
-        navbar.style.background =
-            "rgba(5,10,20,.9)";
+    });
 
-        navbar.style.backdropFilter =
-            "blur(30px)";
-
-    }else{
-
-        navbar.style.background =
-            "rgba(10,15,25,.6)";
-
-    }
-
+    console.log("MT Tech Services Loaded");
 });
-
-// Hero Fade
-
-window.addEventListener("scroll", () => {
-
-    const hero =
-        document.querySelector(".hero");
-
-    if(!hero) return;
-
-    hero.style.opacity =
-        1 - window.scrollY / 800;
-
-});
-
-// Floating Glow Motion
-
-const glow1 =
-    document.querySelector(".glow-1");
-
-const glow2 =
-    document.querySelector(".glow-2");
-
-document.addEventListener("mousemove",(e)=>{
-
-    const x =
-        e.clientX / window.innerWidth;
-
-    const y =
-        e.clientY / window.innerHeight;
-
-    if(glow1){
-
-        glow1.style.transform =
-            `translate(${x*40}px, ${y*40}px)`;
-
-    }
-
-    if(glow2){
-
-        glow2.style.transform =
-            `translate(${-x*40}px, ${-y*40}px)`;
-
-    }
-
-});
-
-// Typing Effect
-
-const badge =
-    document.querySelector(".hero-badge");
-
-if(badge){
-
-    const originalText =
-        badge.innerText;
-
-    badge.innerText = "";
-
-    let i = 0;
-
-    const typeWriter = () => {
-
-        if(i < originalText.length){
-
-            badge.innerText +=
-                originalText.charAt(i);
-
-            i++;
-
-            setTimeout(
-                typeWriter,
-                40
-            );
-
-        }
-
-    };
-
-    typeWriter();
-
-}
-
-// Button Hover Glow
-
-const buttons =
-    document.querySelectorAll(
-        ".book-btn, .primary-btn"
-    );
-
-buttons.forEach(button=>{
-
-    button.addEventListener(
-        "mousemove",
-        e=>{
-
-            const rect =
-                button.getBoundingClientRect();
-
-            const x =
-                e.clientX - rect.left;
-
-            const y =
-                e.clientY - rect.top;
-
-            button.style.setProperty(
-                "--x",
-                `${x}px`
-            );
-
-            button.style.setProperty(
-                "--y",
-                `${y}px`
-            );
-
-        }
-    );
-
-});
-
-console.log(
-    "MT Tech Services Loaded"
-);
