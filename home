@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MT Tech Services</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-glow glow-1"></div>
+<div class="background-glow glow-2"></div>
+
+<nav class="navbar">
+
+    <div class="logo">
+        MT Tech Services
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#service-area">Service Area</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button
+        class="book-btn"
+        data-cal-link="mt-tech-service/mt-tech-services-appointment"
+        data-cal-namespace="mt-tech-services-appointment"
+        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+        Book Now
+    </button>
+
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            Smith Mountain Lake Technology Support
+        </div>
+
+        <h1>
+            Technology Help
+            <span>Made Simple.</span>
+        </h1>
+
+        <p class="hero-description">
+
+            Fast, friendly technology support for computers,
+            Wi-Fi networks, printers, smart home devices,
+            and everyday technology challenges.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-btn"
+                data-cal-link="mt-tech-service/mt-tech-services-appointment"
+                data-cal-namespace="mt-tech-services-appointment"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+
+                Schedule Appointment
+
+            </button>
+
+            <a href="#services" class="secondary-btn">
+
+                Explore Services
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-visual">
+
+        <div class="glass-panel">
+
+            <div class="panel-header">
+                MT Tech Services
+            </div>
+
+            <div class="panel-line"></div>
+            <div class="panel-line"></div>
+            <div class="panel-line"></div>
+            <div class="panel-line"></div>
+
+            <div class="status">
+                ● Available for Scheduling
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stat-card">
+
+        <h2 class="counter" data-target="100">
+            0
+        </h2>
+
+        <p>Devices Supported</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2 class="counter" data-target="50">
+            0
+        </h2>
+
+        <p>Networks Configured</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2 class="counter" data-target="25">
+            0
+        </h2>
+
+        <p>Happy Customers</p>
+
+    </div>
+
+</section>
