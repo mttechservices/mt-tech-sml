@@ -1,8 +1,9 @@
 /* ==========================
    MT TECH SERVICES
-   Tesla / Apple Style Design
+   Clean Modern Tech Theme
 ========================== */
 
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -20,7 +21,9 @@ body{
     overflow-x:hidden;
 }
 
-/* Background */
+/* ==========================
+   BACKGROUND EFFECTS
+========================== */
 
 .background-glow{
     position:fixed;
@@ -47,7 +50,9 @@ body{
     opacity:.15;
 }
 
-/* Navigation */
+/* ==========================
+   NAVBAR
+========================== */
 
 .navbar{
     position:fixed;
@@ -57,28 +62,29 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
-    background:rgba(10,15,25,.6);
+    padding:18px 8%;
+    background:rgba(10,15,25,.65);
     backdrop-filter:blur(20px);
     border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 .logo{
-    font-size:1.5rem;
+    font-size:1.4rem;
     font-weight:700;
     color:#00d4ff;
 }
 
 .nav-links{
     display:flex;
-    gap:35px;
+    gap:30px;
     list-style:none;
 }
 
 .nav-links a{
     color:white;
     text-decoration:none;
-    transition:.3s;
+    transition:.25s;
+    font-weight:500;
 }
 
 .nav-links a:hover{
@@ -87,29 +93,31 @@ body{
 
 .book-btn{
     background:#00d4ff;
-    color:black;
+    color:#000;
     border:none;
-    padding:12px 24px;
+    padding:12px 22px;
     border-radius:999px;
     font-weight:600;
     cursor:pointer;
-    transition:.3s;
+    transition:.25s;
 }
 
 .book-btn:hover{
     transform:translateY(-2px);
-    box-shadow:0 0 25px rgba(0,212,255,.5);
+    box-shadow:0 0 25px rgba(0,212,255,.4);
 }
 
-/* Hero */
+/* ==========================
+   HERO
+========================== */
 
 .hero{
     min-height:100vh;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:space-between;
     padding:140px 8% 80px;
-    gap:80px;
+    gap:60px;
 }
 
 .hero-content{
@@ -122,13 +130,14 @@ body{
     border-radius:999px;
     background:rgba(255,255,255,.06);
     border:1px solid rgba(255,255,255,.08);
-    margin-bottom:25px;
+    margin-bottom:20px;
+    font-size:.9rem;
 }
 
 .hero h1{
-    font-size:5rem;
+    font-size:4.8rem;
     line-height:1.05;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
@@ -137,146 +146,275 @@ body{
 
 .hero-description{
     color:#b6c0d4;
-    font-size:1.15rem;
-    line-height:1.8;
-    margin-bottom:35px;
+    font-size:1.1rem;
+    line-height:1.7;
+    margin-bottom:30px;
 }
 
 .hero-buttons{
     display:flex;
-    gap:20px;
+    gap:15px;
 }
 
 .primary-btn{
     background:#00d4ff;
-    color:black;
+    color:#000;
     border:none;
-    padding:16px 30px;
+    padding:14px 26px;
     border-radius:999px;
     font-weight:700;
     cursor:pointer;
+    transition:.25s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-2px);
 }
 
 .secondary-btn{
     text-decoration:none;
     color:white;
     border:1px solid rgba(255,255,255,.15);
-    padding:16px 30px;
+    padding:14px 26px;
     border-radius:999px;
-    transition:.3s;
+    transition:.25s;
 }
 
 .secondary-btn:hover{
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.06);
 }
 
-/* Glass Panel */
+/* ==========================
+   HERO VISUAL
+========================== */
 
 .glass-panel{
-    width:400px;
-    padding:35px;
-    border-radius:30px;
+    width:380px;
+    padding:30px;
+    border-radius:28px;
     background:rgba(255,255,255,.06);
     backdrop-filter:blur(20px);
     border:1px solid rgba(255,255,255,.08);
-    box-shadow:0 20px 60px rgba(0,0,0,.3);
     animation:float 6s ease-in-out infinite;
 }
 
 .panel-header{
-    font-size:1.2rem;
-    margin-bottom:25px;
     color:#00d4ff;
+    margin-bottom:20px;
+    font-weight:600;
 }
 
 .panel-line{
     height:12px;
-    margin-bottom:15px;
+    margin-bottom:12px;
     border-radius:999px;
     background:rgba(255,255,255,.08);
 }
 
 .status{
-    margin-top:20px;
+    margin-top:15px;
     color:#00ff88;
 }
 
+/* FLOAT */
 @keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
-    100%{transform:translateY(0);}
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
 }
 
-/* Stats */
+/* ==========================
+   STATS
+========================== */
 
 .stats{
     display:flex;
     justify-content:center;
-    gap:40px;
-    padding:50px 8% 120px;
+    gap:30px;
+    padding:60px 8% 120px;
+    flex-wrap:wrap;
 }
 
 .stat-card{
     background:rgba(255,255,255,.05);
-    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.08);
     border-radius:24px;
-    padding:35px;
-    min-width:220px;
+    padding:30px;
+    min-width:200px;
     text-align:center;
-    transition:.3s;
+    transition:.25s;
 }
 
 .stat-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 }
 
 .counter{
-    font-size:3rem;
+    font-size:2.8rem;
     color:#00d4ff;
+}
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.section-title{
+    text-align:center;
+    padding:80px 8% 40px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
     margin-bottom:10px;
 }
 
-/* Services */
-
-.services{
-    padding:120px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:rgba(255,255,255,.05);
-    border-radius:28px;
-    padding:35px;
-    border:1px solid rgba(255,255,255,.08);
-    transition:.35s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 35px rgba(0,212,255,.15);
-}
-
-.card h2{
-    margin-bottom:15px;
-    color:#00d4ff;
-}
-
-.card p{
+.section-title p{
     color:#b6c0d4;
-    line-height:1.7;
 }
 
-/* Footer */
+/* ==========================
+   SERVICES
+========================== */
+
+.services-grid{
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:26px;
+    padding:30px;
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(0,212,255,.12);
+}
+
+.service-icon{
+    color:#00d4ff;
+    margin-bottom:12px;
+    font-weight:600;
+}
+
+.service-card h3{
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#b6c0d4;
+    line-height:1.6;
+}
+
+/* ==========================
+   SHOWCASE
+========================== */
+
+.showcase{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8%;
+    gap:60px;
+}
+
+.showcase-content{
+    max-width:600px;
+}
+
+.feature-list{
+    margin-top:20px;
+    display:grid;
+    gap:10px;
+    color:#b6c0d4;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta{
+    text-align:center;
+    padding:120px 8%;
+    background:rgba(255,255,255,.03);
+    border-top:1px solid rgba(255,255,255,.05);
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.cta h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#b6c0d4;
+    margin-bottom:25px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
 
 footer{
-    text-align:center;
-    padding:60px;
+    padding:60px 8%;
     color:#7f8aa3;
 }
 
-/* Responsive */
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.footer-column h3{
+    margin-bottom:10px;
+    color:white;
+}
+
+.footer-column a{
+    display:block;
+    color:#7f8aa3;
+    text-decoration:none;
+    margin-bottom:6px;
+}
+
+.footer-column a:hover{
+    color:#00d4ff;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:40px;
+}
+
+/* ==========================
+   PARTICLES
+========================== */
+
+.particles span{
+    position:fixed;
+    width:6px;
+    height:6px;
+    background:#00d4ff;
+    border-radius:50%;
+    opacity:.25;
+    animation:rise 12s linear infinite;
+    z-index:-1;
+}
+
+@keyframes rise{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-10vh);}
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
 
 @media(max-width:1000px){
 
@@ -285,25 +423,20 @@ footer{
         text-align:center;
     }
 
-    .hero-buttons{
-        justify-content:center;
+    .hero h1{
+        font-size:3.2rem;
     }
 
-    .hero h1{
-        font-size:3.5rem;
+    .hero-buttons{
+        justify-content:center;
     }
 
     .nav-links{
         display:none;
     }
 
-    .stats{
+    .showcase{
         flex-direction:column;
-        align-items:center;
-    }
-
-    .glass-panel{
-        width:100%;
-        max-width:450px;
+        text-align:center;
     }
 }
