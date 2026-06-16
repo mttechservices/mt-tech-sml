@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book an Appointment | MT Tech Services</title>
+
+<meta name="description"
+content="Schedule technology assistance with MT Tech Services serving Smith Mountain Lake and surrounding communities.">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="container nav-container">
+
+<a href="index.html" class="logo">
+MT Tech Services
+</a>
+
+<nav>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="booking.html" class="nav-button">
+Book Appointment
+</a>
+</li>
+
+</ul>
+
+<button class="menu-toggle">
+☰
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-background"></div>
+
+<div class="container hero-content">
+
+<span class="hero-tag">
+
+Appointment Scheduling
+
+</span>
+
+<h1>
+
+Schedule Your Technology Appointment.
+
+</h1>
+
+<p>
+
+Choose a convenient time to discuss your technology needs.
+Appointments help ensure dedicated time for your questions
+and technology concerns.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#booking" class="primary-btn">
+
+Book Below
+
+</a>
+
+<a href="index.html" class="secondary-btn">
+
+Back Home
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<span>
+
+Simple Process
+
+</span>
+
+<h2>
+
+What To Expect
+
+</h2>
+
+</div>
+
+<div class="card-grid">
+
+<div class="glass-card">
+
+<h3>
+
+Choose A Time
+
+</h3>
+
+<p>
+
+Select an available appointment that works for your schedule.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>
+
+Share Your Needs
+
+</h3>
+
+<p>
+
+Provide a few details about the technology question or issue.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>
+
+Prepare
+
+</h3>
+
+<p>
+
+Have any devices, accessories, or account information available if needed.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>
+
+Meet
+
+</h3>
+
+<p>
+
+Appointment details depend on the service requested and availability.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="glass-card">
+
+<h2>
+
+Helpful Things To Have Ready
+
+</h2>
+
+<br>
+
+<ul>
+
+<li>Your device.</li>
+
+<li>Any chargers or accessories.</li>
+
+<li>Passwords if they may be needed.</li>
+
+<li>A short list of questions or concerns.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="booking">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>
+
+Schedule
+
+</span>
+
+<h2>
+
+Book Your Appointment
+
+</h2>
+
+</div>
+
+<div class="glass-card">
+
+<p style="text-align:center;margin-bottom:30px;">
+
+Choose an available appointment below. Availability may vary
+depending on scheduling and the type of assistance requested.
+
+</p>
+
+<div
+id="my-cal-inline-mt-tech-services-appointment"
+style="
+width:100%;
+min-height:850px;
+overflow:auto;
+border-radius:20px;
+">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="glass-card disclaimer">
+
+<h2>
+
+Important Information
+
+</h2>
+
+<br>
+
+<p>
+
+Appointment availability depends on scheduling,
+service area, and the nature of the request.
+
+</p>
+
+<br>
+
+<p>
+
+Services and recommendations depend on the specific issue.
+Some situations may require manufacturer support or
+specialized repair services.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<h3>
+
+MT Tech Services
+
+</h3>
+
+<p>
+
+Serving Smith Mountain Lake and surrounding communities.
+
+</p>
+
+<br>
+
+<a href="index.html">
+
+Return Home
+
+</a>
+
+<br><br>
+
+<p class="copyright">
+
+© 2026 MT Tech Services
+
+</p>
+
+</div>
+
+</footer>
+
+<script type="text/javascript">
+
+(function (C, A, L) {
+
+let p = function (a, ar) {
+a.q.push(ar);
+};
+
+let d = C.document;
+
+C.Cal = C.Cal || function () {
+
+let cal = C.Cal;
+let ar = arguments;
+
+if (!cal.loaded) {
+
+cal.ns = {};
+cal.q = cal.q || [];
+
+d.head.appendChild(
+d.createElement("script")
+).src = A;
+
+cal.loaded = true;
+
+}
+
+if (ar[0] === L) {
+
+const api = function () {
+p(api, arguments);
+};
+
+const namespace = ar[1];
+
+api.q = api.q || [];
+
+if(typeof namespace === "string"){
+
+cal.ns[namespace] =
+cal.ns[namespace] || api;
+
+p(cal.ns[namespace], ar);
+
+p(cal,
+["initNamespace", namespace]);
+
+}
+
+else{
+
+p(cal, ar);
+
+}
+
+return;
+
+}
+
+p(cal, ar);
+
+};
+
+})(
+
+window,
+
+"https://app.cal.com/embed/embed.js",
+
+"init"
+
+);
+
+Cal(
+
+"init",
+
+"mt-tech-services-appointment",
+
+{
+
+origin:"https://app.cal.com"
+
+}
+
+);
+
+Cal.config = Cal.config || {};
+
+Cal.config.forwardQueryParams = true;
+
+Cal.ns["mt-tech-services-appointment"](
+
+"inline",
+
+{
+
+elementOrSelector:
+"#my-cal-inline-mt-tech-services-appointment",
+
+config:{
+
+layout:"month_view",
+
+useSlotsViewOnSmallScreen:"true"
+
+},
+
+calLink:
+"mt-tech-service/mt-tech-services-appointment"
+
+}
+
+);
+
+Cal.ns["mt-tech-services-appointment"](
+
+"ui",
+
+{
+
+hideEventTypeDetails:false,
+
+layout:"month_view"
+
+}
+
+);
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
