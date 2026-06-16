@@ -1,590 +1,278 @@
-<!DOCTYPE html>
-<html lang="en">
+// =============================
+// MT Tech Services
+// FINAL script.js
+// =============================
 
-<head>
+// MOBILE MENU
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+const menuButton = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-links");
 
-<title>Book an Appointment | MT Tech Services</title>
+if(menuButton && navMenu){
 
-<meta name="description"
-content="Schedule an appointment with MT Tech Services.">
+menuButton.addEventListener("click",()=>{
 
-<link rel="stylesheet" href="style.css">
+navMenu.classList.toggle("mobile-open");
 
-</head>
+});
 
-<body>
+window.addEventListener("resize",()=>{
 
-<header class="navbar">
+if(window.innerWidth>768){
 
-<div class="container nav-container">
+navMenu.classList.remove("mobile-open");
 
-<a href="index.html" class="logo">
+navMenu.style.display="";
 
-MT Tech Services
+}
 
-</a>
+});
 
-<nav>
+}
 
-<ul class="nav-links">
+// MOBILE MENU STYLES
 
-<li>
+const style=document.createElement("style");
 
-<a href="index.html">
+style.innerHTML=`
 
-Home
+.mobile-open{
 
-</a>
+display:flex !important;
 
-</li>
+flex-direction:column;
 
-<li>
+position:absolute;
 
-<a href="#booking">
+top:80px;
 
-Schedule
+right:5%;
 
-</a>
+width:220px;
 
-</li>
+padding:20px;
 
-<li>
+gap:20px;
 
-<a href="#contact">
+background:rgba(255,255,255,.97);
 
-Contact
+backdrop-filter:blur(20px);
 
-</a>
-
-</li>
-
-<li>
-
-<a href="booking.html"
-class="nav-button">
-
-Book Appointment
-
-</a>
-
-</li>
-
-</ul>
-
-<button class="menu-toggle">
-
-☰
-
-</button>
-
-</nav>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-background"></div>
-
-<div class="container hero-content">
-
-<span class="hero-tag">
-
-Appointment Scheduling
-
-</span>
-
-<h1>
-
-Schedule Your Technology Appointment
-
-</h1>
-
-<p>
-
-Book a convenient time to discuss your
-technology questions and support needs.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#booking"
-class="primary-btn">
-
-Book Now
-
-</a>
-
-<a href="index.html"
-class="secondary-btn">
-
-Back Home
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<span>
-
-Simple Process
-
-</span>
-
-<h2>
-
-What To Expect
-
-</h2>
-
-</div>
-
-<div class="card-grid">
-
-<div class="glass-card">
-
-<h3>
-
-Choose A Time
-
-</h3>
-
-<p>
-
-Select an available appointment
-that works for your schedule.
-
-</p>
-
-</div>
-
-<div class="glass-card">
-
-<h3>
-
-Tell Us About Your Issue
-
-</h3>
-
-<p>
-
-Provide a few details about
-what you need help with.
-
-</p>
-
-</div>
-
-<div class="glass-card">
-
-<h3>
-
-Prepare
-
-</h3>
-
-<p>
-
-Have any relevant devices,
-chargers,
-or account information available.
-
-</p>
-
-</div>
-
-<div class="glass-card">
-
-<h3>
-
-Meet
-
-</h3>
-
-<p>
-
-Appointment details depend
-on the service requested
-and availability.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="glass-card">
-
-<h2>
-
-Helpful Things To Have Ready
-
-</h2>
-
-<br>
-
-<ul>
-
-<li>Your device.</li>
-
-<li>Chargers or accessories.</li>
-
-<li>Passwords if needed.</li>
-
-<li>A list of questions.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="booking">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>
-
-Schedule
-
-</span>
-
-<h2>
-
-Book Your Appointment
-
-</h2>
-
-</div>
-
-<div class="glass-card">
-
-<p style="text-align:center;margin-bottom:30px;">
-
-Choose an available appointment below.
-Availability depends on scheduling
-and the type of assistance requested.
-
-</p>
-
-<div
-id="my-cal-inline-mt-tech-services-appointment"
-style="
-width:100%;
-min-height:850px;
-overflow:auto;
 border-radius:20px;
-">
-</div>
 
-</div>
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 
-</div>
+z-index:1000;
 
-</section>
-
-<section id="contact">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>
-
-Contact
-
-</span>
-
-<h2>
-
-Need Help Scheduling?
-
-</h2>
-
-</div>
-
-<div class="glass-card">
-
-<p>
-
-<strong>
-
-Text:
-
-</strong>
-
-<a href="sms:18049101150">
-
-(804) 910-1150
-
-</a>
-
-(Text only)
-
-</p>
-
-<br>
-
-<p>
-
-<strong>
-
-Email:
-
-</strong>
-
-<a href="mailto:mttechservices.sml@gmail.com">
-
-mttechservices.sml@gmail.com
-
-</a>
-
-</p>
-
-<br>
-
-<p>
-
-Text messaging is preferred
-for scheduling questions.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="glass-card disclaimer">
-
-<h2>
-
-Important Information
-
-</h2>
-
-<br>
-
-<p>
-
-Appointment availability depends
-on scheduling,
-service area,
-and the nature of the request.
-
-</p>
-
-<br>
-
-<p>
-
-Services and recommendations
-depend on the specific issue.
-Some situations may require
-manufacturer support
-or specialized repair services.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<div class="container">
-
-<h3>
-
-MT Tech Services
-
-</h3>
-
-<br>
-
-<p>
-
-Serving Smith Mountain Lake
-and surrounding communities.
-
-</p>
-
-<br>
-
-<p>
-
-Text:
-<a href="sms:18049101150">
-
-(804) 910-1150
-
-</a>
-
-(Text only)
-
-</p>
-
-<br>
-
-<p>
-
-Email:
-<a href="mailto:mttechservices.sml@gmail.com">
-
-mttechservices.sml@gmail.com
-
-</a>
-
-</p>
-
-<br>
-
-<a href="index.html">
-
-Return Home
-
-</a>
-
-<p class="copyright">
-
-© 2026 MT Tech Services
-
-</p>
-
-</div>
-
-</footer>
-
-<!-- CAL.COM -->
-
-<script type="text/javascript">
-(function (C, A, L) {
-let p = function (a, ar) { a.q.push(ar); };
-let d = C.document;
-
-C.Cal = C.Cal || function () {
-let cal = C.Cal;
-let ar = arguments;
-
-if (!cal.loaded) {
-cal.ns = {};
-cal.q = cal.q || [];
-d.head.appendChild(
-d.createElement("script")
-).src = A;
-cal.loaded = true;
 }
 
-if (ar[0] === L) {
-const api = function () {
-p(api, arguments);
-};
+`;
 
-const namespace = ar[1];
-api.q = api.q || [];
+document.head.appendChild(style);
 
-if(typeof namespace === "string"){
-cal.ns[namespace] =
-cal.ns[namespace] || api;
+// FAQ
 
-p(cal.ns[namespace], ar);
-p(cal,
-["initNamespace", namespace]);
+const faqItems=document.querySelectorAll(".faq-item");
 
-}else{
-p(cal, ar);
+faqItems.forEach(item=>{
+
+const button=item.querySelector("button");
+const content=item.querySelector("div");
+
+if(button && content){
+
+button.addEventListener("click",()=>{
+
+const active=item.classList.contains("active");
+
+faqItems.forEach(f=>{
+
+f.classList.remove("active");
+
+const d=f.querySelector("div");
+
+if(d){
+
+d.style.maxHeight="0";
+
+d.style.padding="0 22px";
+
 }
 
-return;
+});
+
+if(!active){
+
+item.classList.add("active");
+
+content.style.maxHeight=
+content.scrollHeight+"px";
+
+content.style.padding=
+"0 22px 22px";
+
 }
 
-p(cal, ar);
-};
+});
 
-})(
+}
 
-window,
+});
 
-"https://app.cal.com/embed/embed.js",
+// SCROLL REVEAL
 
-"init"
+const revealElements=document.querySelectorAll(
+
+".glass-card,.hero-content,.section-title"
 
 );
 
-Cal(
-"init",
-"mt-tech-services-appointment",
-{
-origin:"https://app.cal.com"
+const observer=new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform=
+"translateY(0)";
+
 }
-);
 
-Cal.config = Cal.config || {};
-Cal.config.forwardQueryParams = true;
+});
 
-Cal.ns["mt-tech-services-appointment"](
-"inline",
-{
-
-elementOrSelector:
-"#my-cal-inline-mt-tech-services-appointment",
-
-config:{
-layout:"month_view",
-useSlotsViewOnSmallScreen:"true"
 },
 
-calLink:
-"mt-tech-service/mt-tech-services-appointment"
-
-}
-
-);
-
-Cal.ns["mt-tech-services-appointment"](
-"ui",
 {
-hideEventTypeDetails:false,
-layout:"month_view"
+
+threshold:.15
+
 }
+
 );
 
-</script>
+revealElements.forEach(element=>{
 
-<script src="script.js"></script>
+observer.observe(element);
 
-</body>
-</html>
+});
+
+// NAVBAR EFFECT
+
+const navbar=document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+
+if(!navbar) return;
+
+if(window.scrollY>50){
+
+navbar.style.background=
+"rgba(255,255,255,.95)";
+
+navbar.style.boxShadow=
+"0 10px 30px rgba(0,0,0,.08)";
+
+}else{
+
+navbar.style.background=
+"rgba(255,255,255,.8)";
+
+navbar.style.boxShadow="none";
+
+}
+
+});
+
+// SMOOTH SCROLL
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+const target=document.querySelector(
+
+this.getAttribute("href")
+
+);
+
+if(target){
+
+e.preventDefault();
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+if(navMenu){
+
+navMenu.classList.remove("mobile-open");
+
+}
+
+}
+
+});
+
+});
+
+// BUTTON HOVER
+
+const buttons=document.querySelectorAll(
+
+".primary-btn,.secondary-btn,.nav-button"
+
+);
+
+buttons.forEach(button=>{
+
+button.addEventListener("mouseenter",()=>{
+
+button.style.transform=
+
+"translateY(-3px)";
+
+});
+
+button.addEventListener("mouseleave",()=>{
+
+button.style.transform=
+
+"translateY(0px)";
+
+});
+
+});
+
+// AUTO COPYRIGHT YEAR
+
+const copyright=document.querySelector(".copyright");
+
+if(copyright){
+
+copyright.textContent=
+
+`© ${new Date().getFullYear()} MT Tech Services`;
+
+}
+
+// SCROLL TO TOP ON REFRESH
+
+window.onbeforeunload=function(){
+
+window.scrollTo(0,0);
+
+};
+
+// CONSOLE MESSAGE
+
+console.log(
+
+"MT Tech Services website loaded successfully."
+
+);
