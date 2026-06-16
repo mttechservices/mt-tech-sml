@@ -396,16 +396,21 @@ section{
 
     font-weight:600;
 
-}
-
 .faq-item div{
 
-    padding:0 22px 22px;
+max-height:0;
 
-    color:var(--text);
+overflow:hidden;
+
+padding:0 22px;
+
+transition:
+max-height .3s ease,
+padding .3s ease;
+
+color:var(--text);
 
 }
-
 /* ---------- CTA ---------- */
 
 .cta{
