@@ -1,142 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT Tech Services | Smith Mountain Lake Tech Support</title>
 
-<title>MT Tech Services</title>
+    <meta name="description" content="Friendly technology help for Smith Mountain Lake and surrounding areas. Device setup, general tech support, and everyday technology assistance.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- BACKGROUND -->
-<div class="background-glow glow-1"></div>
-<div class="background-glow glow-2"></div>
+<!-- Navigation -->
 
-<!-- NAV -->
-<nav class="navbar">
+<header class="navbar">
+    <div class="container nav-container">
 
-    <div class="logo">MT Tech Services</div>
+        <a href="index.html" class="logo">
+            MT Tech Services
+        </a>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li>
+                    <a href="booking.html" class="nav-button">
+                        Book Appointment
+                    </a>
+                </li>
+            </ul>
 
-    <button class="book-btn" data-cal-link="mt-tech-services-appointment">
-        Book Appointment
-    </button>
+            <button class="menu-toggle">
+                ☰
+            </button>
+        </nav>
 
-</nav>
+    </div>
+</header>
 
-<!-- HERO -->
-<header class="hero">
+<!-- Hero -->
 
-    <div class="hero-content">
+<section class="hero">
 
-        <div class="hero-badge">Smith Mountain Lake Tech Support</div>
+    <div class="hero-background"></div>
+
+    <div class="container hero-content">
+
+        <span class="hero-tag">
+            Serving Smith Mountain Lake
+        </span>
 
         <h1>
-            Technology Help <span>Made Simple</span>
+            Friendly Technology Help for Everyday Life.
         </h1>
 
-        <p class="hero-description">
-            Fast, friendly help with computers, Wi-Fi, printers, and smart devices.
+        <p>
+            MT Tech Services provides straightforward help with everyday technology,
+            device setup, and common tech issues for the Smith Mountain Lake area.
         </p>
 
         <div class="hero-buttons">
-            <button class="primary-btn" data-cal-link="mt-tech-services-appointment">
-                Schedule Appointment
-            </button>
 
-            <a href="services.html" class="secondary-btn">
-                Explore Services
+            <a href="booking.html" class="primary-btn">
+                Schedule an Appointment
             </a>
+
+            <a href="#about" class="secondary-btn">
+                Learn More
+            </a>
+
         </div>
 
     </div>
 
-</header>
+</section>
 
-<!-- STATS -->
-<section class="stats">
+<!-- About -->
 
-    <div class="stat-card">
-        <h2 class="counter" data-target="100">0</h2>
-        <p>Support Tasks</p>
-    </div>
+<section id="about">
 
-    <div class="stat-card">
-        <h2 class="counter" data-target="50">0</h2>
-        <p>Networks Helped</p>
-    </div>
+    <div class="container">
 
-    <div class="stat-card">
-        <h2 class="counter" data-target="25">0</h2>
-        <p>Device Fixes</p>
+        <div class="section-title">
+
+            <span>About</span>
+
+            <h2>
+                Technology Support Without the Confusion.
+            </h2>
+
+        </div>
+
+        <div class="glass-card">
+
+            <p>
+                MT Tech Services helps people with everyday technology questions
+                and common device issues. Whether you're setting up a new device,
+                trying to understand a feature, or working through a technology
+                problem, the goal is to provide friendly and straightforward help.
+            </p>
+
+            <p>
+                Every situation is different, and recommendations are based on
+                the specific needs of each appointment.
+            </p>
+
+        </div>
+
     </div>
 
 </section>
 
-<!-- SERVICES PREVIEW -->
-<section class="section-title">
-    <h2>Services</h2>
-    <p>Simple help for everyday technology</p>
+<!-- Services -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Services</span>
+
+            <h2>
+                How MT Tech Services Can Help
+            </h2>
+
+        </div>
+
+        <div class="card-grid">
+
+            <div class="glass-card">
+                <h3>Device Setup</h3>
+
+                <p>
+                    Assistance with setting up new computers,
+                    phones, tablets, and other everyday devices.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h3>General Tech Support</h3>
+
+                <p>
+                    Help with common technology issues,
+                    troubleshooting, and basic software problems.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Home Technology Help</h3>
+
+                <p>
+                    Assistance with Wi-Fi basics,
+                    printers, and common home technology questions.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Technology Guidance</h3>
+
+                <p>
+                    Learn more about your devices,
+                    settings, accounts, and everyday technology.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="services-grid">
+<!-- Why Choose -->
 
-    <div class="service-card">
-        <div class="service-icon">Computer</div>
-        <h3>Computer Help</h3>
-        <p>Repairs, setup, optimization, and troubleshooting.</p>
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Why Choose MT Tech Services</span>
+
+            <h2>
+                A Friendly Approach to Technology.
+            </h2>
+
+        </div>
+
+        <div class="card-grid">
+
+            <div class="glass-card">
+                <h3>Friendly</h3>
+                <p>
+                    Clear explanations without unnecessary technical language.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Local</h3>
+                <p>
+                    Proudly serving Smith Mountain Lake
+                    and nearby communities.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Straightforward</h3>
+                <p>
+                    Honest recommendations based on the specific situation.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Personalized</h3>
+                <p>
+                    Every appointment focuses on individual needs and questions.
+                </p>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="service-card">
-        <div class="service-icon">Wi-Fi</div>
-        <h3>Network Setup</h3>
-        <p>Wi-Fi setup, troubleshooting, and improvement.</p>
+</section>
+
+<!-- Service Area -->
+
+<section>
+
+    <div class="container">
+
+        <div class="glass-card">
+
+            <h2>Service Area</h2>
+
+            <p>
+                MT Tech Services serves Smith Mountain Lake and surrounding
+                communities, including Moneta, Wirtz, Hardy, Huddleston,
+                and nearby areas.
+            </p>
+
+            <p>
+                Service availability may vary depending on location
+                and scheduling.
+            </p>
+
+        </div>
+
     </div>
 
-    <div class="service-card">
-        <div class="service-icon">Devices</div>
-        <h3>Device Support</h3>
-        <p>Phones, tablets, TVs, and smart devices.</p>
+</section>
+
+<!-- FAQ -->
+
+<section id="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>FAQ</span>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+        <div class="faq">
+
+            <div class="faq-item">
+                <button>What kinds of problems do you help with?</button>
+                <div>
+                    Everyday technology issues, setup assistance,
+                    and general tech support.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button>Can every issue be fixed?</button>
+                <div>
+                    Not always. Available solutions depend on the
+                    specific issue and circumstances.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button>Do I need an appointment?</button>
+                <div>
+                    Scheduling ahead is recommended.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button>What devices do you work with?</button>
+                <div>
+                    Many common consumer technology devices.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Disclaimer -->
+
+<section>
+
+    <div class="container">
+
+        <div class="glass-card disclaimer">
+
+            <h2>Important Information</h2>
+
+            <p>
+                Services depend on the specific issue,
+                device compatibility, available resources,
+                and scheduling availability.
+            </p>
+
+            <p>
+                Some situations may require manufacturer support
+                or specialized repair services.
+            </p>
+
+        </div>
+
     </div>
 
 </section>
 
 <!-- CTA -->
+
 <section class="cta">
 
-    <h2>Need Help Today?</h2>
-    <p>Book an appointment and get fast support.</p>
+    <div class="container">
 
-    <button class="primary-btn" data-cal-link="mt-tech-services-appointment">
-        Schedule Appointment
-    </button>
+        <div class="glass-card">
+
+            <h2>
+                Ready for Technology Help?
+            </h2>
+
+            <p>
+                Schedule an appointment to discuss your technology needs.
+            </p>
+
+            <a href="booking.html" class="primary-btn">
+                Book an Appointment
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
+
 <footer>
 
-    <div class="footer-bottom">
-        © 2026 MT Tech Services
+    <div class="container">
+
+        <h3>
+            MT Tech Services
+        </h3>
+
+        <p>
+            Serving Smith Mountain Lake and surrounding areas.
+        </p>
+
+        <a href="booking.html">
+            Schedule an Appointment
+        </a>
+
+        <p class="copyright">
+            © 2026 MT Tech Services
+        </p>
+
     </div>
 
 </footer>
 
 <script src="script.js"></script>
-<script src="https://app.cal.com/embed/embed.js"></script>
 
 </body>
 </html>
